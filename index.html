@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo|Acme|PT+Sans|Vollkorn" rel="stylesheet">
+        <!--
+            Fontes Utilizadas:
+                -> Logo: Acme
+                -> Menu: Vollkorn
+                -> Titulos: Baloo
+                -> Textos: 
+        -->
+        <title>Home</title>
+        <script src="js/handlebars-v4.0.5.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script> 
+        <!-- http://bootswatch.com/flatly/ --> 
+    </head>
+    <body>
+        <!-- Logo atroveran imovéis -->
+        <div class="container">
+            <header>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="logotipo">
+                        <h1>Atroveran Imovéis</h1>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- Menu -->
+        <nav class="menu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="listamenu nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Imóveis Para<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li role="separator" class="divider"></li>
+                                <li><a href="comprar.html">Comprar</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Alugar</a></li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Anúnciar</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+                        <li><a href="cadastro.html">Cadastrar-se</a></li>
+                    </ul>
+                    <!-- Menu com Botões
+                    div class="nav navbar-nav navbar-right">
+                        <button type="submit" class="botoesMenu btn btn-Primary btn-sm" data-toggle="modal" data-target="#myModal">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login
+                        </button>
+                        <button type="submit" class="botoesMenu btnCadastrar btn btn-Primary btn-sm">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Cadastrar
+                        </button> 
+                    </div-->
+                </div>
+            </div>
+        </nav>
+        <!-- Campo Titulo -->
+        <div class="container">
+            <div class="tituloAluComHome titulo row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="bordaTopTitulos"></div>
+                    <p>Principais Anúncios</p>
+                    <div class="bordaBottomTitulos"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide -->
+        <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="img/casa1.jpg" alt="casa em Chapecó" width="800" height="460">
+                        <div class="carousel-caption">
+                            <strong>Chapecó-SC</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/casa2.jpg" alt="casa em Joenvile" width="800" height="460">
+                        <div class="carousel-caption">
+                            <strong>Joenvile - SC</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/casa3.jpg" alt="casa em São Paulo" width="800" height="460">
+                        <div class="carousel-caption">
+                            <strong>São Paulo - SP</strong>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/casa4.jpg" alt="casa em Passo Fundo" width="800" height="460">
+                        <div class="carousel-caption">
+                            <strong>Passo Fundo - RS</strong>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <br>
+        <!-- Rodape-->
+        <footer>
+            Copyright <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> 
+            2017 atroveran imovéis
+        </footer>
+        <!-- Login -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="titulo modal-title">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" action="index.html">
+                            <!--  Campo Email-->                        
+                            <div class="form-group">
+                                <label class="control-label col-sm-2 col-sm-offset-1" for="email">Email:</label>
+                                <div class="col-sm-7">
+                                    <input type="email" class="form-control" id="email" placeholder="Seu Email" name="email" required autofocus>
+                                </div>
+                            </div>
+                            <!--  Campo Senha -->
+                            <div class="form-group">
+                                <label class="control-label col-sm-2 col-sm-offset-1" for="pwd">Senha:</label>
+                                <div class="col-sm-7">          
+                                    <input type="password" class="form-control" id="pwd" placeholder="Sua Senha" name="pwd">
+                                </div>
+                            </div>
+                            <!--  button Submit -->
+                            <div class="form-group">        
+                                <div class="col-md-offset-4 col-md-4">
+                                    <button type="submit" class="btn btn-info btn-block">Entrar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--script>
+             var AnuncioSlide = {infos:[
+                {src:"img/casa1.jpg", alt:"casa1", textoImagem:""}, 
+                {src:"img/casa2.jpg", alt:"casa2", textoImagem:""}, 
+                {src:"img/casa3.jpg", alt:"casa3", textoImagem:""},
+                {src:"img/casa4.jpg", alt:"casa4", textoImagem:""}
+            ]};
+            var origem = $("#slidePrincipaisAnuncios").html();
+            var gerarTemp = Handlebars.compile(origem);
+            var resul = gerarTemp(AnuncioSlide);
+            $("#conteudoSlide").html(resul);
+        </script-->
+    </body>
+</html>

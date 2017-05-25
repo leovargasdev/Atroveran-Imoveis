@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo|Acme|PT+Sans|Vollkorn|Arvo" rel="stylesheet">
+        <!--
+            Fontes Utilizadas:
+                -> Logo: Acme
+                -> Menu: Vollkorn
+                -> Titulos: Baloo
+                -> Textos: Arvo
+        -->
+        <title>Sobre</title>
+        <script src="js/handlebars-v4.0.5.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script> <!-- http://bootswatch.com/flatly/ --> 
+    </head>
+    <body>
+        <!-- Logo atroveran imovéis -->
+        <div class="container">
+            <header>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="logotipo">
+                        <h1>Atroveran Imovéis</h1>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- Menu -->
+        <nav class="menu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="listamenu nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Imóveis Para<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li role="separator" class="divider"></li>
+                                <li><a href="comprar.html">Comprar</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Alugar</a></li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Anúnciar</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Campo Titulo -->
+        <div class="container">
+            <div class="tituloCadastroSobre titulo row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="bordaTopTitulos"></div>
+                    <p>Sobre</p>
+                    <div class="bordaBottomTitulos"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Campo sobre o site -->
+        <div class="container">
+            <div class="row">
+                <div class="subTituloSobre
+                            col-xs-10 col-xs-offset-1
+                            col-sm-8 col-sm-offset-2
+                            col-md-6 col-md-offset-3
+                            col-lg-6 col-lg-offset-3">
+                    <p>Tudo que você precisa saber sobre nós</p>
+                    <div class="linhaTextos"></div>
+                </div>
+            </div>
+            <br>
+            <div class="botoesSobre row">
+                <div class="col-xs-8 col-xs-offset-2
+                            col-sm-4 col-sm-offset-1
+                            col-md-2 col-md-offset-1
+                            col-lg-2 col-lg-offset-1">
+                    <button id="spanData" type="button" class="btn btn-success btn-block" data-toggle="collapse" data-target="#data">
+                        <span class="glyphicon glyphicon-calendar"></span> Data de Criação
+                    </button>
+                </div>
+                <div class="col-xs-8 col-xs-offset-2
+                            col-sm-4 col-sm-offset-2
+                            col-md-2 col-md-offset-0
+                            col-lg-2 col-lg-offset-0">
+                    <button id="spanMotivo" type="button" class="btn btn-success btn-block" data-toggle="collapse" data-target="#motivo">
+                        <span class="glyphicon glyphicon-usd"></span> Motivo
+                    </button>
+                </div>
+                <div class="col-xs-8 col-xs-offset-2
+                            col-sm-4 col-sm-offset-4
+                            col-md-2 col-md-offset-0
+                            col-lg-2 col-lg-offset-0">
+                    <button id="spanSomos" type="button" class="btn btn-success btn-block" data-toggle="collapse" data-target="#somos">
+                        <span class="glyphicon glyphicon-search"></span> Quem Somos
+                    </button>
+                </div>
+                <div class="col-xs-8 col-xs-offset-2
+                            col-sm-4 col-sm-offset-1
+                            col-md-2 col-md-offset-0
+                            col-lg-2 col-lg-offset-0">
+                    <button id="spanSurgiu" type="button" class="btn btn-success btn-block" data-toggle="collapse" data-target="#surgiu">
+                        <span class="glyphicon glyphicon-globe"></span> Onde Surgiu
+                    </button>
+                </div>
+                <div class="col-xs-8 col-xs-offset-2
+                            col-sm-4 col-sm-offset-2
+                            col-md-2 col-md-offset-0
+                            col-lg-2 col-lg-offset-0">
+                    <button id="spanContatos" type="button" class="btn btn-success btn-block" data-toggle="collapse" data-target="#contatos">
+                        <span class="glyphicon glyphicon-phone-alt"></span> Contatos
+                    </button>
+                </div>
+            </div>
+            <div class="descricoesBotoes">
+                <div id="data" class="collapse" >
+                    <p>Era um dia frio, pois era inverno!</p>
+                    <p>No dia 12 de julho de 1992</p>
+                    <p>As 13:57 PM</p>
+                    <div class="linhaTextos"></div>
+                </div>
+                <div id="motivo" class="collapse" >
+                    <p>As empresas que forneciam esse serviço, não eram de boa qualidade</p>
+                    <p>A partir disso decidi criar uma empresa para mudar esse cenário</p>
+                    <p>Pois eu não sou uma empresa de Imóveis que o Brasil merece, mas oque ele precisa</p>
+                    <div class="linhaTextos"></div>
+                </div>
+                <div id="somos" class="collapse" >
+                    <p>Trabalhamos com o ramo de venda e aluga de imóveis(apartamentos, casas)</p>
+                    <p>Se você quiser colocar seu imóvel à venda, fale conosco!</p>
+                    <p>Se você quiser alugar/comprar um imóvel, fale conosco!</p>
+                    <p><b>Nosso lema é:</b> Dedicação total a você!!!</p>
+                    <div class="linhaTextos"></div>
+                </div>
+                <div id="surgiu" class="collapse" >
+                    <p>Quando eu estava eu passeando pela cidade Dom Aquino</p>
+                    <p>Que fica localizada no estado do Mato Grosso</p>
+                    <p>Tive a brilhante ideia de criar essa empresa</p>
+                    <p>E assim deixando a vida de muitas familias felizes!!!</p>
+                    <div class="linhaTextos"></div>
+                </div>
+                <div id="contatos" class="collapse">
+                    <p><b>Email:</b> atroveran@yahoo.com</p>
+                    <p><b>Telefone:</b>(049) 4455 - 3113</p>
+                    <p><b>Endereço:</b> Rua Qualquer Lugar</p>
+                    <p><b>Fax:</b> 0800 080 567</p>
+                    <p><b>Caixa Postal:</b> 783912</p>
+                    <div class="linhaTextos"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Rodape-->
+        <footer>
+            Copyright <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> 
+            2017 atroveran imovéis
+        </footer>
+        <script>
+            $(document).ready(function(){
+                // Data de Criação
+                $("#data").on("hide.bs.collapse", function(){//Volta ao icone normal
+                    $("#spanData").html('<span class="glyphicon glyphicon-calendar"></span> Data de Criação');
+                });
+                $("#data").on("show.bs.collapse", function(){//Troca de icone
+                    $("#spanData").html('<span class="glyphicon glyphicon-triangle-top"></span> Data de Criação');
+                });
+                // Motivo
+                $("#motivo").on("hide.bs.collapse", function(){//Volta ao icone normal
+                    $("#spanMotivo").html('<span class="glyphicon glyphicon-usd"></span> Motivo');
+                });
+                $("#motivo").on("show.bs.collapse", function(){//Troca de icone
+                    $("#spanMotivo").html('<span class="glyphicon glyphicon-triangle-top"></span> Motivo');
+                });
+                 // Quem somos
+                $("#somos").on("hide.bs.collapse", function(){//Volta ao icone normal
+                    $("#spanSomos").html('<span class="glyphicon glyphicon-search"></span> Quem Somos');
+                });
+                $("#somos").on("show.bs.collapse", function(){//Troca de icone
+                    $("#spanSomos").html('<span class="glyphicon glyphicon-triangle-top"></span> Quem Somos');
+                });
+                 // Onde Surgiu
+                $("#surgiu").on("hide.bs.collapse", function(){//Volta ao icone normal
+                    $("#spanSurgiu").html('<span class="glyphicon glyphicon-globe"></span> Onde Surgiu');
+                });
+                $("#surgiu").on("show.bs.collapse", function(){//Troca de icone
+                    $("#spanSurgiu").html('<span class="glyphicon glyphicon-triangle-top"></span> Onde Surgiu');
+                });
+                 // Contatos
+                $("#contatos").on("hide.bs.collapse", function(){//Volta ao icone normal
+                    $("#spanContatos").html('<span class="glyphicon glyphicon-phone-alt"></span> Contatos');
+                });
+                $("#contatos").on("show.bs.collapse", function(){//Troca de icone
+                    $("#spanContatos").html('<span class="glyphicon glyphicon-triangle-top"></span> Contatos');
+                });
+            });
+        </script>
+    </body>
+</html>

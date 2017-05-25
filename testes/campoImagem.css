@@ -1,0 +1,27 @@
+body{
+    padding: 2px;
+    background-color: rgba(123,104,238,0.4);
+}
+.containerComVen{
+    background-color: rgba(70,130,180,0.55);
+    margin-bottom: 20px;
+    border-radius: 30px;
+    padding: 5px;
+}
+#btnVerAnuncio{
+    margin-top: 30%;
+}
+@media screen and (max-width: 992px) {
+    #btnVerAnuncio{
+        margin-top: 5px;
+    }
+    .containerInfo{
+        font-size: 2px;
+    }
+}
+.containerInfo{
+    font-family: 'PT Sans', sans-serif;
+    margin: 10px auto 10px 5px;
+    line-height: 1.6;
+    font-size: 17px;
+}
